@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{9138957C-D984-4DF9-9472-D77F792FDB81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApps", "WebApps", "{A8904600-42DF-4881-83F9-93A06E796D2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalogo", "Catalogo", "{01FFCE22-7433-44DA-91B5-724B07FE2EE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{AC1F8BC1-0B2F-4C4A-ACCD-4ADD0782728D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vendas", "Vendas", "{D0A315F7-469D-4485-B514-FA5D44C0101B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pagamento", "Pagamento", "{83B5CFDD-3ADA-46B4-8121-3EF80EE3CC59}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fiscal", "Fiscal", "{A557E768-F6AB-4A26-8762-DA061D341A06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockStore.Core", "src\DockStore.Core\DockStore.Core.csproj", "{6644D16F-F5AC-4123-A7D6-41CA77BE9619}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockStore.Catalogo.Domain", "src\DockStore.Catalogo.Domain\DockStore.Catalogo.Domain.csproj", "{75F9226F-A6B6-4D30-A5F6-738D65588029}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6644D16F-F5AC-4123-A7D6-41CA77BE9619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6644D16F-F5AC-4123-A7D6-41CA77BE9619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6644D16F-F5AC-4123-A7D6-41CA77BE9619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6644D16F-F5AC-4123-A7D6-41CA77BE9619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75F9226F-A6B6-4D30-A5F6-738D65588029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75F9226F-A6B6-4D30-A5F6-738D65588029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75F9226F-A6B6-4D30-A5F6-738D65588029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75F9226F-A6B6-4D30-A5F6-738D65588029}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{01FFCE22-7433-44DA-91B5-724B07FE2EE8} = {9138957C-D984-4DF9-9472-D77F792FDB81}
+		{AC1F8BC1-0B2F-4C4A-ACCD-4ADD0782728D} = {9138957C-D984-4DF9-9472-D77F792FDB81}
+		{D0A315F7-469D-4485-B514-FA5D44C0101B} = {9138957C-D984-4DF9-9472-D77F792FDB81}
+		{83B5CFDD-3ADA-46B4-8121-3EF80EE3CC59} = {9138957C-D984-4DF9-9472-D77F792FDB81}
+		{A557E768-F6AB-4A26-8762-DA061D341A06} = {9138957C-D984-4DF9-9472-D77F792FDB81}
+		{6644D16F-F5AC-4123-A7D6-41CA77BE9619} = {AC1F8BC1-0B2F-4C4A-ACCD-4ADD0782728D}
+		{75F9226F-A6B6-4D30-A5F6-738D65588029} = {01FFCE22-7433-44DA-91B5-724B07FE2EE8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F6CF563-4A80-42D5-9F8A-CC525334A9EE}
+	EndGlobalSection
+EndGlobal
