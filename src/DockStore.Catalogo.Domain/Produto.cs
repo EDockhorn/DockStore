@@ -13,7 +13,7 @@ namespace DockStore.Catalogo.Domain
         public decimal Valor { get; private set; }
         public DateTime DataCadastro { get; private set; }
         public string Imagem { get; private set; }
-        public int QuantidadeDeEstoque { get; private set; }
+        public int QuantidadeEstoque { get; private set; }
         public Dimensoes Dimensoes { get; set; }
         public Categoria Categoria { get; set; }
 
@@ -53,17 +53,17 @@ namespace DockStore.Catalogo.Domain
         {
             if (quantidade < 0) quantidade *= -1;
             if (!PossuiEstoque(quantidade)) throw new DomainException("Estoque insuficiente");
-            QuantidadeDeEstoque -= quantidade;
+            QuantidadeEstoque -= quantidade;
         }
 
         public void ReporEstoque(int quantidade)
         {
-            QuantidadeDeEstoque += quantidade;
+            QuantidadeEstoque += quantidade;
         }
 
         public bool PossuiEstoque(int quantidade)
         {
-            return QuantidadeDeEstoque >= quantidade;
+            return QuantidadeEstoque >= quantidade;
         }
 
         public void Validar()
