@@ -1,5 +1,4 @@
 using System;
-using DockStore.Catalogo.Domain;
 using DockStore.Core.DomainObjects;
 using Xunit;
 
@@ -47,7 +46,7 @@ namespace DockStore.Catalogo.Domain.Tests
                 new Produto("Nome", "Descricao", false, 100, Guid.NewGuid(), DateTime.Now, "Imagem", new Dimensoes(0, 1, 1))
             );
 
-            Assert.Equal("O campo Altura não pode ser menor ou igual a 0s", ex.Message);
+            Assert.Equal("O campo Altura não pode ser menor ou igual a 0", ex.Message);
         }
     }
 }
