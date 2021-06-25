@@ -2,6 +2,7 @@
 using DockStore.Catalogo.Data;
 using DockStore.Catalogo.Data.Repository;
 using DockStore.Catalogo.Domain;
+using DockStore.Catalogo.Domain.Events;
 using DockStore.Core.Bus;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,7 +22,7 @@ namespace DockStore.WebApp.MVC.Setup
             services.AddScoped<IEstoqueService, EstoqueService>();
             services.AddScoped<CatalogoContext>();
 
-            //services.AddScoped<INotificationHandler<ProdutoAbaixoEstoqueEvent>, ProdutoEventHandler>();
+            services.AddScoped<INotificationHandler<ProdutoAbaixoEstoqueEvent>, ProdutoEventHandler>();
         }
     }
 }

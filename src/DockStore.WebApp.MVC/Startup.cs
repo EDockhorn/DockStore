@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace DockStore.WebApp.MVC
 {
@@ -45,6 +46,8 @@ namespace DockStore.WebApp.MVC
             services.AddMediatR(typeof(Startup));
 
             services.RegisterServices();
+
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -70,10 +73,26 @@ namespace DockStore.WebApp.MVC
             app.UseAuthentication();
             app.UseAuthorization();
 
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapRazorPages();
+            //});
+
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller=Vitrine}/{action=Index}/{id?}");
+            //});
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
+
+            System.Console.WriteLine(Guid.NewGuid());
+            System.Console.WriteLine(Guid.NewGuid());
+            System.Console.WriteLine(Guid.NewGuid());
         }
     }
 }
