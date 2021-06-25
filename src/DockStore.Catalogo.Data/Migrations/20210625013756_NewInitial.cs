@@ -2,7 +2,7 @@
 
 namespace DockStore.Catalogo.Data.Migrations
 {
-    public partial class Initial_2 : Migration
+    public partial class NewInitial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

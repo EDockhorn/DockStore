@@ -8,6 +8,7 @@ namespace DockStore.Catalogo.Domain
 
         public string Nome { get; private set; }
         public int Codigo { get; private set; }
+        public string Descricao { get; set; }
 
         //EF Relation
         public IEnumerable<Produto> Produtos { get; set; }

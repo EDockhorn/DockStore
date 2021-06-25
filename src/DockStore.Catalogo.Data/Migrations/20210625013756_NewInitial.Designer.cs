@@ -10,15 +10,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DockStore.Catalogo.Data.Migrations
 {
     [DbContext(typeof(CatalogoContext))]
-    [Migration("20210623024840_Initial_2")]
-    partial class Initial_2
+    [Migration("20210625013756_NewInitial")]
+    partial class NewInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasAnnotation("ProductVersion", "3.1.14")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.7")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("DockStore.Catalogo.Domain.Categoria", b =>
@@ -29,6 +29,9 @@ namespace DockStore.Catalogo.Data.Migrations
 
                     b.Property<int>("Codigo")
                         .HasColumnType("int");
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -93,16 +96,16 @@ namespace DockStore.Catalogo.Data.Migrations
                                 .HasColumnType("uniqueidentifier");
 
                             b1.Property<int>("Altura")
-                                .HasColumnType("int")
-                                .HasColumnName("Altura");
+                                .HasColumnName("Altura")
+                                .HasColumnType("int");
 
                             b1.Property<int>("Largura")
-                                .HasColumnType("int")
-                                .HasColumnName("Largura");
+                                .HasColumnName("Largura")
+                                .HasColumnType("int");
 
                             b1.Property<int>("Profundidade")
-                                .HasColumnType("int")
-                                .HasColumnName("Profundidade");
+                                .HasColumnName("Profundidade")
+                                .HasColumnType("int");
 
                             b1.HasKey("ProdutoId");
 
@@ -111,15 +114,6 @@ namespace DockStore.Catalogo.Data.Migrations
                             b1.WithOwner()
                                 .HasForeignKey("ProdutoId");
                         });
-
-                    b.Navigation("Categoria");
-
-                    b.Navigation("Dimensoes");
-                });
-
-            modelBuilder.Entity("DockStore.Catalogo.Domain.Categoria", b =>
-                {
-                    b.Navigation("Produtos");
                 });
 #pragma warning restore 612, 618
         }
