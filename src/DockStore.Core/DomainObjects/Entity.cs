@@ -41,6 +41,11 @@ namespace DockStore.Core.DomainObjects
         //    return (GetType().GetHashCode * 907) + Id.GetHashCode();
         //}   
 
+        public virtual bool EhValido()
+        {
+            throw new NotImplementedException();
+        }
+
         public override string ToString()
         {
             return $"{GetType().Name} [Id={Id}]";

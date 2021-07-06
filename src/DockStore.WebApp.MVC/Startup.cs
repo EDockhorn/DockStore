@@ -1,4 +1,3 @@
-using AutoMapper;
 using DockStore.Catalogo.Application.AutoMapper;
 using DockStore.Catalogo.Data;
 using DockStore.WebApp.MVC.Data;
