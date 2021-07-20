@@ -28,6 +28,7 @@ namespace DockStore.WebApp.MVC.Setup
             // Vendas
 
             services.AddScoped<IRequestHandler<AdicionarItemPedidoCommand, bool>, PedidoCommandHandler>();
+            
         }
     }
 }
